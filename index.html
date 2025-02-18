@@ -1,27 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Event List</title>
-    </head>
-    <body>
-        <h1>GTFO</h1>
-        <ul id="event-list"></ul>
-        <script>
-            fetch("events.json")
-                .then((response) => response.json())
-                .then((events) => {
-                    const list = document.getElementById("event-list");
-                    events.forEach((event) => {
-                        const li = document.createElement("li");
-                        li.textContent = `${event.venue_name} - ${event.event_date} (${event.main_artist})`;
-                        list.appendChild(li);
-                    });
-                })
-                .catch((error) =>
-                    console.error("Error loading events:", error),
-                );
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+   <img src="grandpa.jpeg" alt="Grandpa">
+</body>
 </html>
+
